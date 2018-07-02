@@ -8,11 +8,127 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/Black"
+    android:focusableInTouchMode="true"
     tools:context="com.journaldev.retrofitintro.MainActivity">
 
     <TextView
+        android:id="@+id/responseText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/CarbsRange"
+        android:layout_alignParentTop="true"
+        android:text="@string/welcome_message"
+        android:textColor="@color/White" />
+
+    <SeekBar
+        android:id="@+id/CarbsRange"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/ProteinRange"
+        android:layout_marginTop="182dp" />
+
+    <SeekBar
+        android:id="@+id/ProteinRange"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/FatRange"
+        android:layout_marginTop="225dp" />
+
+    <SeekBar
+        android:id="@+id/FatRange"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginTop="275dp" />
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/responseText"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignEnd="@+id/textView5"
+        android:text="Calories"
+        android:textColor="@color/White" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="2000"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/CarbsRange"
+        android:text="Carbs"
+        android:textColor="@color/White"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/ProteinRange"
+        android:text="Protein"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/FatRange"
+        android:text="Fat"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="23dp"
+        android:text="TextView" />
+
+    <ScrollView
+        android:layout_width="137dp"
+        android:layout_height="187dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="144dp">
+
+        <LinearLayout
+            android:id="@+id/scrollViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
 </RelativeLayout>

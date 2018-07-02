@@ -1,5 +1,6 @@
 package com.journaldev.retrofitintro;
 
+import com.journaldev.retrofitintro.pojo.BasicAuthInterceptor;
 import com.journaldev.retrofitintro.pojo.MultipleResource;
 
 import okhttp3.OkHttpClient;
@@ -19,11 +20,12 @@ class APIClient {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new BasicAuthInterceptor("miguel","python")).build();
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://reqres.in")
+//                .baseUrl("https://reqres.in")
+                .baseUrl("https://portioncalculator.herokuapp.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

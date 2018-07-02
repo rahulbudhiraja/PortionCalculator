@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RetrofitIntro</string>
+    <string name="welcome_message">Hello Rahul. Modify your Macro goals and choose recipes you would like to plan around</string>
 </resources>

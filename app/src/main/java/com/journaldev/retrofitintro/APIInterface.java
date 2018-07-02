@@ -1,6 +1,9 @@
 package com.journaldev.retrofitintro;
 
+import com.journaldev.retrofitintro.pojo.Foods;
 import com.journaldev.retrofitintro.pojo.MultipleResource;
+import com.journaldev.retrofitintro.pojo.ORToolsSolution;
+import com.journaldev.retrofitintro.pojo.Task;
 import com.journaldev.retrofitintro.pojo.User;
 import com.journaldev.retrofitintro.pojo.UserList;
 
@@ -18,6 +21,15 @@ import retrofit2.http.Query;
 
 interface APIInterface {
 
+    @GET("/v1/tasks")
+    Call<Task> getTaskList();
+
+    @GET("/v1/tasks/ortools")
+    Call<ORToolsSolution> getSolution();
+
+    @GET("/v1/foods")
+    Call<Foods> getFoods();
+
     @GET("/api/unknown")
     Call<MultipleResource> doGetListResources();
 
@@ -30,4 +42,6 @@ interface APIInterface {
     @FormUrlEncoded
     @POST("/api/users?")
     Call<UserList> doCreateUserWithField(@Field("name") String name, @Field("job") String job);
+
+
 }
